@@ -1,6 +1,6 @@
 /*Carlos Alfredo Morales(Sn0rlax)
     Oct 1-2016
-	Chapter  6.Exercise 9:  Compose doubleegers out of characters: 123 is 1 hundered 2 tens and 3 ones 
+	Chapter  6.Exercise 10:  Doing variations, combinations or both
 	Book: Programming ~ Principles and Practice using C++
 */
 #include <std_lib_facilities.h>
