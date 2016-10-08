@@ -1,5 +1,5 @@
 /*Carlos Alfredo Morales(Sn0rlax)
-    Oct 06-2016
+    Oct 07-2016
 	Chapter  7.Drill: Improving the calculator
 	Book: Programming ~ Principles and Practice using C++
 ////////////////////////////////////
@@ -37,7 +37,7 @@ Number:
 	
 */
 #include "std_lib_facilities.h"
-//Definition of Tokens and their funcions, Tokens are the main object with which the program works
+//Definition of Tokens and their functions, Tokens are the main object with which the program works
 struct Token {
 	char kind;
 	double value;
@@ -67,7 +67,7 @@ const char name = 'a';
 const char my_sqrt= 's';
 const char my_pow='p';
 
-//Most used function, used to extract characters from stantard input (or token_stream) and to the right thing with them
+//Most used function, used to extract characters from standard input (or token_stream) and to the right thing with them
 Token Token_stream::get()
 {
 	if (full) { full=false; return buffer; }
@@ -330,28 +330,28 @@ try {
 		define_name("pi",3.1415926535);
 		define_name("e",2.7182818284);
 		define_name("k",1000);
-		cout<<"Hello!. This calculator can perform the following operations:"<<endl;
+		cout<<"\nHello!. This calculator can perform the following operations:"<<endl;
 		cout<<"*Basics: a+b,  a-b,  a/b,  a*b"<<endl;
 		cout<<"*Advanced:"<<endl; 
 		cout<<"-| a%b | Shows the remainder of a division. Example: 2%3=2"<<endl;
-		cout<<"-| pow(a,b) | exponencial operation, where a is the base and b is the exponent."<<endl;
+		cout<<"-| pow(a,b) | exponential operation, where a is the base and b is the exponent."<<endl;
 		cout<<"-| sqrt(x) | square root, where x is a positive value"<<endl;
 		cout<<"-| let name = operation or value | This assigns the value after = to the entered name"<<endl;
 		cout<<"*I can handle different operations in a single line,\ndoing them in the correct mathematical order"<<endl;
 		cout<<"*To show the result you must enter a ';' at the end"<<endl;
 		cout<<"*To terminate the program write exit or quit"<<endl;
-		cout<<"*Please feel free to try different inputs and spot any bugs in the program"<<endl;
+		cout<<"*Please feel free to try different inputs and spot any bugs in the program\n"<<endl;
 		calculate();
 		return  0;
 	}
 	catch (exception& e) {
 		cerr << "exception: " << e.what() << endl;
-		keep_window_open("q");
+		//keep_window_open("q");
 		return 1;
 	}
 	catch (...) {
 		cerr << "exception\n";
-		keep_window_open("q");
+		//keep_window_open("q");
 		return 2;
 	}
 }
